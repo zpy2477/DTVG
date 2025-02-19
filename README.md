@@ -22,9 +22,7 @@ Our framework requires Python 3.5 or higher. We do not support Python 2.X.
 ## Installation
 Run the following commands to clone the repository and install our framework:
 
-git clone ****  
-Download this  from 
-
+Download this repository from [DTVG](https://anonymous.4open.science/r/DTVG-CD4E)
 cd dtvg
 pip install -r requirements.txt
 
