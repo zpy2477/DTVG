@@ -8,7 +8,7 @@ In the paper,  we introduce the DTVG, a novel approach for addressing potential 
 
 1. [Requirements](#requirements)
 2. [Installation](#installation)
-3. [Train](#license)
+3. [Train](#train)
    - [Task Prompt Vector Learning](#task-prompt-vector-learning)
    - [Multi-Task Prompt Transfer](#multi-task-prompt-transfer)
 4. [Baselines](#baselines)
