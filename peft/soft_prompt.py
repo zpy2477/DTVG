@@ -73,10 +73,6 @@ class SoftPrompt(nn.Module):
                 with open(os.path.join(max_step_checkpoint,"trainer_state.json"),mode='r') as f: # type: ignore
                     path = json.load(f)["best_model_checkpoint"] # type: ignore
                 print(f"From max_step={max_step_checkpoint} load best checkpoint={path}")
-        ### prefix path
-        prefix = "/home/LAB/zhangpy/miracle/dtvg"
-        if prefix not in path:
-            path = os.path.join(prefix,path)
         self.load_soft_prompt(path=path,task=task)
         self.load_soft_prompt_init(path=path,task=task)
 
