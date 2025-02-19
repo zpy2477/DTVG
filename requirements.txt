@@ -1,0 +1,6 @@
+torch
+transformers[torch]==4.45.2
+datasets==2.21.0
+scikit-learn==1.5.2
+tqdm==4.66.5
+rouge_score
