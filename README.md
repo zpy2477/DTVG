@@ -1,6 +1,6 @@
 # Dynamic Task Vector Grouping for Efficient Multi-Task Prompt Tuning
 
-![](image.png)
+![](/pic/image.png)
 
 In the paper,  we introduce the DTVG, a novel approach for addressing potential negative transfer in multi-task prompt tuning based on task prompt vectors. Compared to vanilla transfer of the soft prompt from all source tasks, we dynamically group a subset of source tasks and merge their task prompt vectors to avoid an unrelated source task inducing performance degradation of the target task. Extensive experiments demonstrate that DTVG effectively groups related source tasks to further optimize the performance of the target task.
 
