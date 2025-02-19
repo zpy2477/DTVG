@@ -7,7 +7,7 @@ for seed in {42,}
 do
 python run_seq2seq.py \
    --seed $seed \
-   --output_dir "/home/LAB/zhangpy/miracle/dtvg/llama-3.2-1B/cola_seed={42}" \
+   --output_dir "/llama-3.2-1B/cola_seed={42}" \
    --do_train False \
    --do_eval False \
    --do_test True \
@@ -43,13 +43,3 @@ python run_seq2seq.py \
    --load_best_model_at_end True \
    --metric_for_best_model "average_metric"
 done
-
-   # --num_train_epochs 20 \
-   # --evaluation_strategy 'epoch' \
-   # --save_strategy 'epoch' \
-
-
-   # --save_steps 1000 \
-   # --eval_steps 1000 \
-   # --max_steps 30000 \
-   # --evaluation_strategy "steps" \
