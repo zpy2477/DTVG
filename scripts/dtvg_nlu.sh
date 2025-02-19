@@ -29,10 +29,10 @@ python run_seq2seq.py \
    --test_dataset_config_name "en" \
    --learning_rate $lr_1 \
    --target_task_scale_learning_rate $lr_1 \
-   --target_prompt_embedding_path "/home/LAB/zhangpy/miracle/dtvg/${MODEL_NAME}/${TARGET_TASK_NAME}_seed={$seed}" \
+   --target_prompt_embedding_path "/${MODEL_NAME}/${TARGET_TASK_NAME}_seed={$seed}" \
    --multi_task_names "mnli" "qnli" "qqp" "sst2" "superglue-record" "squad" \
    --source_task_scale_learning_rate $lr_2 \
-   --prompt_embedding_path "/home/LAB/zhangpy/miracle/dtvg/${MODEL_NAME}/mnli_seed={$seed}" "/home/LAB/zhangpy/miracle/dtvg/${MODEL_NAME}/qnli_seed={$seed}" "/home/LAB/zhangpy/miracle/dtvg/${MODEL_NAME}/qqp_seed={$seed}" "/home/LAB/zhangpy/miracle/dtvg/${MODEL_NAME}/sst2_seed={$seed}" "/home/LAB/zhangpy/miracle/dtvg/${MODEL_NAME}/superglue-record_seed={$seed}" "/home/LAB/zhangpy/miracle/dtvg/${MODEL_NAME}/squad_seed={$seed}" \
+   --prompt_embedding_path "/${MODEL_NAME}/mnli_seed={$seed}" "/${MODEL_NAME}/qnli_seed={$seed}" "/${MODEL_NAME}/qqp_seed={$seed}" "/${MODEL_NAME}/sst2_seed={$seed}" "/${MODEL_NAME}/superglue-record_seed={$seed}" "/${MODEL_NAME}/squad_seed={$seed}" \
    --model_name_or_path "/home/LAB/zhangpy/model/${MODEL_NAME}" \
    --tokenizer_name "/home/LAB/zhangpy/model/${MODEL_NAME}" \
    --overwrite_output_dir True \
