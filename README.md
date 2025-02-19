@@ -6,26 +6,25 @@ In the paper,  we introduce the DTVG, a novel approach for addressing potential 
 
 ## Quick links
 
-1. [Installation](#installation)
-2. [Usage](#usage)
-4. [Contributing](#contributing)
-5. [License](#license)
-6. [Acknowledgments](#acknowledgments)
+1. [Requirements](#requirements)
+2. [Installation](#installation)
+3. [Train](#license)
+   - [Task Prompt Vector Learning](#task-prompt-vector-learning)
+   - [Multi-Task Prompt Transfer](#multi-task-prompt-transfer)
 
-## Installation
-<!-- Provide installation steps -->
 
-### Requirements
+## Requirements
 Our framework requires Python 3.5 or higher. We do not support Python 2.X.
 - Python 3.10
 - PyTorch (currently tested on version 1.7.0)
 - Transformers (version 4.45.2; unlikely to work with a different version)
 
-
-### Set up
+## Installation
 Run the following commands to clone the repository and install our framework:
 
-git clone  
+git clone ****  
+Download this  from 
+
 cd dtvg
 pip install -r requirements.txt
 
@@ -36,12 +35,11 @@ pip install -r requirements.txt
 DTVG consists of two stages: 1) Task Prompt Vector Learning to obtain a tuned TPV for each source and target task and 2) Multi-Task Prompt Transfer to group source tasks' TPV and merge it with the target vector's TPV. Note that the first stage only needs to be performed once, while the second stage is iterative, and the source task group will be dynamically updated during the fine-tuning process of the target task.
 
 ### Task Prompt Vector Learning
-We provide prompt_tuning_nlu.sh in /scripts, with which you can easily run training on each source and target task to obatain task prompt vectors (TPV). 
+We provide prompt_tuning_nlu.sh and prompt_tuning_nlg.sh in /scripts, with which you can easily run training on each source and target task to obatain task prompt vectors (TPV). 
 
 
 ```
 bash /scripts/prompt_tuning_nlu.sh
-
 bash /scripts/prompt_tuning_nlg.sh
 ```
 
@@ -49,10 +47,9 @@ bash /scripts/prompt_tuning_nlg.sh
 ### Multi-Task Prompt Transfer
 
 
-We provide  dtvg_nlu.sh in /scripts, with which you can easily run training on the target task. you need modify TASK_NAME in  prompt_tuning_nlu.sh if you need.
+We provide  dtvg_nlu.sh and  dtvg_nlg.sh in /scripts, with which you can easily run training on the target task. you need modify TASK_NAME in dtvg_nlu.sh or dtvg_nlg.sh if you need.
 ```
 bash /scripts/dtvg_nlu.sh
-
 bash /scripts/dtvg_nlg.sh
 ```
 
@@ -62,3 +59,6 @@ bash /scripts/dtvg_nlg.sh
    --prompt_embedding_path "${MODEL_NAME}/mnli_seed={$seed}" "${MODEL_NAME}/qnli_seed={$seed}" "${MODEL_NAME}/qqp_seed={$seed}" "${MODEL_NAME}/sst2_seed={$seed}" "${MODEL_NAME}/superglue-record_seed={$seed}" "${MODEL_NAME}/squad_seed={$seed}" \
 ```
 Notely, Task Prompt Vector Learning must run firstly on sources and target task. Secondly, You need modify prompt_embedding_path and target_prompt_embedding_path for source tasks and target tasks, respectily. 
+
+## Baselines
+We provide SPoT.sh in /scripts, with which you can easily run SPoT baseline on the target task. you also need run [Task Prompt Vector Learning](#task-prompt-vector-learning) to obtain soft prompt firstly.
