@@ -16,7 +16,7 @@ In the paper,  we introduce the DTVG, a novel approach for addressing potential 
 ## Requirements
 Our framework requires Python 3.5 or higher. We do not support Python 2.X.
 - Python 3.10
-- PyTorch (currently tested on version 1.7.0)
+- PyTorch (currently tested on version 2.5.1)
 - Transformers (version 4.45.2; unlikely to work with a different version)
 
 ## Installation
