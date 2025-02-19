@@ -22,8 +22,8 @@ python run_seq2seq.py \
    --dataset_config_name "en" \
    --eval_dataset_config_name "en" \
    --test_dataset_config_name "en" \
-   --model_name_or_path "/home/LAB/zhangpy/model/$MODEL_NAME" \
-   --tokenizer_name "/home/LAB/zhangpy/model/$MODEL_NAME" \
+   --model_name_or_path $MODEL_NAME \
+   --tokenizer_name $MODEL_NAME \
    --greater_is_better True \
    --overwrite_output_dir True \
    --init_prefix_from_vocab True \
