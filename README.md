@@ -62,3 +62,6 @@ Notely, Task Prompt Vector Learning must run firstly on sources and target task.
 
 ## Baselines
 We provide SPoT.sh in /scripts, with which you can easily run SPoT baseline on the target task. you also need run [Task Prompt Vector Learning](#task-prompt-vector-learning) to obtain soft prompt firstly.
+```
+bash /scripts/SPoT.sh
+```
