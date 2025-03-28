@@ -8,7 +8,6 @@ import collections
 from logging import getLogger
 from .qa_utils import normalize_squad, qa_metrics
 import sklearn.metrics
-import evaluate
 import functools
 import itertools
 from .bleu import compute_bleu
